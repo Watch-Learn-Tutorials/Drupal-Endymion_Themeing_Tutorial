@@ -1,0 +1,86 @@
+How to make a theme in drupal 8
+    folder structure
+        - themes > custom > folderName
+
+.info.yml file will have your theme known in drupal 8
+    - File Includes: name: description: core:8.x type:
+
+If you ever needed to remove a style sheet from core drupal do so in info.yml file type following:
+    stylesheets-remove:
+        - core/path/to/css/css.module.css
+After saving that you need to clear the cache also make sure that chache is disabled & agregate javascript/ agregate css 
+checkbox is disabled in configurations > performance or else the css files won't show up as it were
+
+The .libraries.yml file is used to define any css or javascript files we are adding to it
+* remeber in yml files that indentation matters
+* the libraries file must be defined in the info.yml file
+    - So the css definition in libaries is being called in info.yml's libraries sectionfinition in libaries is being called in info.yml's libraries section
+
+When you do not have a theme installed for a page. Drupal defualts back to the core theme 
+    - That homepage islocated : 
+        core/modules/system/templates/page.html/twig
+
+===========================================================================
+                                    Video 2
+If there is an error in the browser you can type localhost.dd/rebuild.php
+    - and calling rebuild.php will rebuild the settings. 
+If  rebuild.php fails
+    - call /update.php on the page. If at all possible place it in maintance mode first. c
+
+You can see your current settings in sites > files > default.serivces.yml
+
+To turn off chache  & turn on debug settings
+    Go to sites > example.settings.local.php & copy into sites > default folder 
+        - then rename it to settings.local.php
+        in the newly copy file is Load local development override configuration, if available option & uncomment it
+        now is enbabled. 
+    - You can also turn on production by renaming default.services.yml in sites/ default to services.yml & settings.php in that folder will container a services settings that calls services.yml
+=========================================================================================
+                                    Video 3
+Install gulp globally:
+
+If you have previously installed a version of gulp globally, please run npm rm --global gulp to make sure your old version doesn't collide with gulp-cli.
+
+$ npm install --global gulp-cli
+
+2. Install gulp in your project devDependencies:
+
+$ npm install --save-dev gulp
+
+3. Create a gulpfile.js at the root of your project:
+
+var gulp = require('gulp');
+
+gulp.task('default', function() {
+  // place code for your default task here
+});
+
+4. Run gulp:
+
+$ gulp 
+
+The default task will run and do nothing.
+
+To run individual tasks, use gulp <task> <othertask>.
+
+WHY WONT NPM  PACKAGES Install
+
+
+Uninstall node-sass: npm uninstall node-sass Delete package-lock.json, and clean the cache: npm cache clean --force, then do npm update, npm-install, npm-update. then again try to install node sass: npm-install node-sass.
+
+if this doesn't word, Try to rebuild node-sass:
+
+npm rebuild node-sass
+
+if that doesn't work then i suggest to delete package-lock.json, node-modules and npm cache folder and do npm install , to install all your dependencies again. make sure you have a package.json file with all your dependencies listed.
+
+The package-lock.json file has some issues(it doesn't update when package.json changes) as mentioned here:https://github.com/npm/npm/issues/16866 "Touching package.json by hand may make your package.json to be incompatible with package-lock.json" do npm update to update the package-lock.json file. to completely disable package-lock creation: npm config set package-lock false
+================================================================================
+gulp watch 
+    - will watch files specifed in the gulp file witht he watch function
+-------------------------------------------------------------------------
+ When you make changes to any configuration file such as the .yml files, you need to clear the cache for changes to take place. 
+
+drush cache-clear theme-registry 
+    - will clear the registry theme
+drush cache-clear will show all available options to clear cache

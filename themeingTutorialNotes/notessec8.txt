@@ -1,0 +1,5 @@
+How to make a header
+If  you place nate the header code into a folder called partials/header.html.twig
+& call {% include directory ~ '/partials/header.html.twig' %} in place of the header
+on page--front.html.twig & put it in page.html.twig it will propagate threw the site since
+those are the two main ones for the header & what not. 

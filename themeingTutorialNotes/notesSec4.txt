@@ -1,0 +1,67 @@
+================================================================================
+gulp watch 
+    - will watch files specifed in the gulp file witht he watch function
+-------------------------------------------------------------------------
+ When you make changes to any configuration file such as the .yml files, you need to clear the cache for changes to take place. 
+
+drush cache-clear theme-registry 
+    - will clear the registry theme
+drush cache-clear will show all available options to clear cache
+=================================================================================
+Regions
+======================================================================
+When doing regions the regions need to be declared in the twig file named 
+    - .info.yml
+    Regions delcared in info.yml are as follows:
+        regions:
+          header: 'Header'
+          content: "Main_page_content"
+          footer: Footer
+                * In twig strings need " when special _/%$ characters are in it
+                    ** Other wise ' quotes or No quotes are interpriated as strings
+    regions are known as key/value pairs & the word region is the machine key so yml knows how to handle those key's values
+    the region will then match up as a key in the page.html.twig file with page.keyName &
+    then the value of that key will be known as a  string in the region name of drupal in blocks       
+         - After writing the regions and before pressing save on the editor you 
+         need to syncronize the confirugation file in configuration> syncronize > import > single file >
+         and past the unsaved yml file to the basic configuration & then import it
+          - Next the cache needs to be cleared in from the site. Experimentation has found it won't work anyother way
+            - Now you can finally save the yml file in the visual studios
+                 - Use export syncronize to see if the yml file was sync  
+        * Other keys are 
+                name (required)
+    type (required)
+    description (optional)
+    package (optional)
+    core (required)
+    php (optional)
+    version (optional)
+    libraries (optional)
+    libraries-override (optional)
+    base theme (recommended)
+    hidden (optional)
+    engine (optional)
+    logo (optional)
+    screenshot (optional)
+    regions (optional)
+    regions_hidden (optional)
+    features (optional)
+    stylesheets-remove (deprecated will be removed in drupal 9, recommend to use 
+                                    libraries-override instead)
+    ckeditor_stylesheets (optional)
+==================================================================================================
+	Updating
+When updating first download the zip of the new update & unzip it
+  - Next remove all files in the root directory along with the vendor and core folders.
+    - Now retreive all files + hidden files in the root directory of the new version, the core folder & the vendor folder & cut/paste them in the working root directory
+      - Go into maintance mode
+        - Run http://drupalthemeing.dd:8083/update.php to follow the onscreen update instructions
+=================================================================================
+At the top is file name suggestions. The teacher renamed the page.html.twig file to front--page.html.twig
+    - The header and other block layouts come from core > themes> stable> templates
+    - You can copy the templates folder into the custom> endymion themes folder to use it from there. 
+        - Now if you edit templates folder it won't do what it does when edited in core which is delete all other files and write over them. 
+--------------==================================================================================
+When you see {% %} it is telling drupal to do something and apply some logic
+We add {{ }} to add in any variables, strings, values, or use any functions
+

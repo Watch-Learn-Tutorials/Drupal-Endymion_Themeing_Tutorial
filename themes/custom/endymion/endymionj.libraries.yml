@@ -1,0 +1,5 @@
+global-js:
+  js:
+    js/main.js: {}
+  dependencies:
+    core/assets/vendor/jquery/jquery.js 

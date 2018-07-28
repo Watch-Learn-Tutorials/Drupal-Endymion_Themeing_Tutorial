@@ -328,3 +328,20 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+
+#ignor the modules file and node modules file and profile file since we aint using it
+node_modules
+modules
+core
+profiles
+vendor
+.csslintrc
+.editorconfig
+.eslintrc.json
+.ht.router.php
+.htaccess
+.vscode-upload.json
+.vscode\settings.json
+sites
+themes\custom\endymion\js
+themes\custom\endymion\lib

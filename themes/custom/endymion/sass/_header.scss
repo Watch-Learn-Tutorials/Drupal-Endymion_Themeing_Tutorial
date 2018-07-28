@@ -1,0 +1,129 @@
+.main-header {
+    height: 300px;
+    width: 100%;
+    background: url(../images/theHero.jpg) no-repeat center center;
+}
+
+.logo {
+    @include span(2);
+    img {
+        max-width: 100%;
+    }
+}
+
+.mainNav {
+    margin-top: 10px;
+    @include span(5 last);
+    li {
+        float: left;
+    }
+    a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 0 10px;
+    }
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.mylogo {
+    img {
+        max-height: 400%;
+        max-width: 400%;
+    }
+}
+
+.heading-container {
+    display: relative;
+    margin: 0;
+    border: 6px solid purple;
+    height: 250px;
+    width: 100%;
+}
+
+a:link {
+    color: white;
+}
+
+:visited {
+    color: white;
+}
+
+.main-navigation {
+    display: fixed;
+    border: 6px solid white;
+    height: 100px;
+    width: 10%;
+}
+
+.nav-container {
+    display: relative;
+    height: 80px;
+    width: 7%;
+    margin: -50px 0px 0px 840px;
+    border: 6px solid black;
+}
+
+// .main-header {
+//     display: fixed;
+//     border: 6px solid red;
+//     height: 300px;
+//     width: 100%;
+//     background: url(../images/theHero.jpg) no-repeat center center;
+// }
+// .logo {
+//     @include span(2);
+//     img {
+//         max-width: 100%;
+//     }
+// }
+// .mainNav {
+//     margin-top: 10px;
+//     @include span(5 last);
+//     li {
+//         float: left;
+//     }
+//     a {
+//         display: block;
+//         color: white;
+//         text-decoration: none;
+//         padding: 0 10px;
+//     }
+//     &:hover {
+//         text-decoration: underline;
+//     }
+// }
+// .mylogo {
+//     img {
+//         max-height: 400%;
+//         max-width: 400%;
+//     }
+// }
+// .heading-container {
+//     display: relative;
+//     margin: 0;
+//     border: 6px solid purple;
+//     height: 250px;
+//     width: 100%;
+// }
+// a:link {
+//     color: white;
+// }
+// :visited {
+//     color: white;
+// }
+// .main-navigation {
+//     display: fixed;
+//     border: 6px solid white;
+//     height: 100px;
+//     width: 10%;
+// }
+// .nav-container {
+//     display: relative;
+//     height: 80px;
+//     width: 7%;
+//     margin: -50px 0px 0px 840px;
+//     border: 6px solid black;
+// }
