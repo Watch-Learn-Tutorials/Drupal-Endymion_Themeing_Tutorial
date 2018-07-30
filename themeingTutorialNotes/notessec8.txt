@@ -3,3 +3,8 @@ If  you place nate the header code into a folder called partials/header.html.twi
 & call {% include directory ~ '/partials/header.html.twig' %} in place of the header
 on page--front.html.twig & put it in page.html.twig it will propagate threw the site since
 those are the two main ones for the header & what not. 
+----------------------------------------
+With views you can edit content, title, body type or create a type
+You can use css to override classes & id character sets
+You can create new content types in addition to article & basic page 
+by going to structure>content types

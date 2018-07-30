@@ -1,3 +1,5 @@
+npm init -y 
+ - will initialize your json file then you can npm install progarms
 How to make a theme in drupal 8
     folder structure
         - themes > custom > folderName

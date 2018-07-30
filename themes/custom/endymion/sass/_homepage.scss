@@ -1,0 +1,70 @@
+main {
+    margin-top: 100px;
+}
+
+.centerContent {
+    margin: 0 50px;
+}
+
+.layout-content {
+    @include span(1);
+    margin: 0 20%;
+}
+
+.layout-sidebar-first {
+    @include span(1);
+    margin: 0 50px;
+}
+
+.layout-sidebar-second {
+    @include span(2 last);
+}
+
+h2 {
+    .field-content {
+        color: red;
+    }
+}
+
+.movies-default {
+    h2 {
+        color: red;
+    }
+    h1 {
+        a {
+            color: red;
+            text-decoration: none;
+        }
+    }
+    h3 {
+        a {
+            color: #767676;
+            text-decoration: none;
+        }
+    }
+    h4 {
+        a {
+            color: #767676;
+            text-decoration: none;
+        }
+    }
+}
+
+.article-list {
+    h3 {
+        a {
+            color: #767676;
+            text-decoration: none;
+        }
+    }
+    .views-row {
+        margin: 40px 0;
+    }
+    p {
+        line-height: 1.5;
+    }
+    .views-field-view-node a {
+        color: red;
+        text-decoration: none;
+    }
+}
